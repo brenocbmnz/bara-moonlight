@@ -1,0 +1,30 @@
+.footer {
+    display: flex;                  /* Use flexbox for simple layout */
+    justify-content: flex-end;      /* Push copyright notice to the right */
+    align-items: center;            /* Align the copyright and logo vertically */
+  }
+  
+  .logo-placeholder {
+    width: 50px;      /* Adjust as needed for your logo's width */
+    height: 50px;     /* Adjust as needed for your logo's height */
+    background-color: #eee;  /* Placeholder background color */
+    margin-right: 15px;      /* Space between logo and copyright */
+    opacity: 0;              /* Hide the logo initially */
+    transition: opacity 0.3s ease-in-out;  /* Add a smooth fade effect */
+  }
+  
+  .footer:hover .logo-placeholder { 
+    opacity: 1;  /* Show the logo on hover */
+  } 
+
+  .logo {
+    max-width: 50px;  /* Adjust as needed */
+    max-height: 50px; /* Adjust as needed */ 
+    margin-right: 15px;
+    opacity: 0;      
+    transition: opacity 0.3s ease-in-out; 
+  }
+  
+  .footer:hover .logo { 
+    opacity: 1;  
+  } 

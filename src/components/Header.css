@@ -1,0 +1,10 @@
+.header nav ul {
+    display: flex; /* Use flexbox for horizontal layout */
+    list-style: none; /* Remove default bullet points */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .header nav ul li {
+    margin-right: 20px; /* Add spacing between items */
+  }
