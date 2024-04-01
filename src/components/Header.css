@@ -1,10 +1,70 @@
+.header {
+  background-color: #131519;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+  padding: 5px 0;
+  opacity: 0; /* Make header invisible by default */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+.header:hover {
+  opacity: 1; /* Make header visible on hover */
+}
+
 .header nav ul {
-    display: flex; /* Use flexbox for horizontal layout */
-    list-style: none; /* Remove default bullet points */
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  flex-wrap: wrap;
+}
+
+.header nav ul li {
+  text-align: center;
+  margin: 0 15px;
+  font-family: 'General Sans', sans-serif; 
+}
+
+.header nav ul li.nav-item.logo {
+  margin-left: -30px;
+}
+
+.home-image {
+  width: 150px;
+  height: auto;
+}
+
+.header a {
+  color: #ffffff;
+}
+
+.nav-item-logo {
+  display:flex;
+  padding-right: 500px;
+}
+
+@media (max-width: 600px) {
+  .nav-item-logo {
+    padding-right: 20px;
   }
-  
+
+  .home-image {
+    width: 100px;
+  }
+
   .header nav ul li {
-    margin-right: 20px; /* Add spacing between items */
+    margin: 0 10px;
   }
+}
+
+.header a {
+  color: #ffffff;
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make text bold */
+}
+
+.lottie-animation2 {
+  width: 550px !important;
+  height: 550px !important;
+}

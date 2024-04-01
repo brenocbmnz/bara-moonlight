@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: #f8f8f8;
+}
+
+.navigation {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0; /* Add some padding for spacing */
+  text-align: center; /* Center the navigation links */
+}
+
+body {
+  background-color: var(--bg-color); 
+}

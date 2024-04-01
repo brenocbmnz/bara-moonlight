@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className=<img src="/path/to/your/logo.png" alt="Your Gallery Logo" className="logo"/> /> {/* An empty div to hold the logo */}
-      <p className="copyright">© {currentYear} Aegenwulfs</p>
+      <p className="copyright">PLACEHOLDER</p>
     </footer>
   );
 }

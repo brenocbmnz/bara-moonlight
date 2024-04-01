@@ -1,0 +1,9 @@
+.arrow-animation {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+  opacity: 0; /* Start with 0 opacity */
+  transition: opacity 1s ease-in-out;
+}

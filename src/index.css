@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root { /* Target the root element for global styling */
+  --bg-color:     #131519; 
+  --accent:       #393e41; 
+  --highlight-1:  #b6174b;
+  --highlight-2:  #188fa7;
+  --main-text:    #ffffff;
+}
+
+body { 
+  color: var(--main-text);
+}
+
+
+body { /* Or a more specific selector */
+  font-family: 'General Sans', sans-serif; 
+}
