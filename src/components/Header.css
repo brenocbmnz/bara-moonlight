@@ -1,11 +1,11 @@
 .header {
   background-color: #131519;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
   padding: 5px 0;
   opacity: 0; /* Make header invisible by default */
   transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  width: 20%; /* Set the width of the header */
+  margin: auto; /* Center the header */
 }
-
 .header:hover {
   opacity: 1; /* Make header visible on hover */
 }
@@ -35,19 +35,21 @@
   height: auto;
 }
 
-.header a {
-  color: #ffffff;
-}
-
 .nav-item-logo {
-  display:flex;
-  padding-right: 500px;
+  order: -1; /* Make logo appear first */
+  margin-right: auto; /* Push other items to the right */
 }
 
 @media (max-width: 600px) {
   .nav-item-logo {
     padding-right: 20px;
   }
+  /* Responsive design for screens smaller than 800px */
+@media (max-width: 800px) {
+  .header {
+    width: 100%; /* Increase the width of the header for smaller screens */
+  }
+}
 
   .home-image {
     width: 100px;
@@ -62,9 +64,18 @@
   color: #ffffff;
   text-decoration: none; /* Remove underline */
   font-weight: bold; /* Make text bold */
+  transition: color 0.3s ease; /* Add transition for smooth color change */
+}
+
+.header a:hover {
+  color: #aaa; /* Change color on hover */
 }
 
 .lottie-animation2 {
   width: 550px !important;
   height: 550px !important;
+}
+
+.nav-item {
+  margin-left: auto; /* Push items to the right of the logo */
 }

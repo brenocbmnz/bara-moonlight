@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
 
 function Home() {
+  const [showText, setShowText] = useState(false);
+
+  const handleDoubleClick = () => {
+    setShowText(true);
+  };
+
   return (
-    <main className="home">
-      <div className="text-container">
+    <main className="home" onDoubleClick={handleDoubleClick}>
+      <div className={`text-container ${showText ? 'show-text' : ''}`}>
         <p className="line1">
           The full moon painted the sprawling forest with its cold, silver light
         </p>
@@ -17,6 +23,16 @@ function Home() {
         <p className="line4">
           Two shadows, larger than life, danced in the pale light… forever intertwined.
         </p>
+        <div className="button-container">
+          <button className={`styled-button ${showText ? 'show-button' : ''}`} style={{animationDelay: '8s'}}>
+            <span className="big-text">The Aegenwulfs</span>
+            <span className="small-text">[bio and a short story]</span>
+          </button>
+          <button className={`styled-button right-button ${showText ? 'show-button' : ''}`} style={{animationDelay: '9s'}}>
+            <span className="big-text">Moonlit Gallery</span>
+            <span className="small-text">[collection of art]</span>
+          </button>
+        </div>
       </div>
     </main>
   );

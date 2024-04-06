@@ -50,8 +50,8 @@ function Header() {
               {animationData && <Lottie options={defaultOptions} height={50} width={50} isStopped={isStopped} />}
             </Link>
           </li>
-          <li className="nav-item"> <Link to="/about">Bio</Link></li>
-          <li className="nav-item"> <Link to="/gallery">Gallery</Link></li>
+          <li className="nav-item"> <Link to="/about">The Aegenwulfs</Link></li>
+          <li className="nav-item"> <Link to="/gallery">Moonlit Gallery</Link></li>
         </ul>
       </nav>
     </header>
