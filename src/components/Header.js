@@ -29,7 +29,7 @@ function Header() {
   const handleMouseEnter = () => {
     hoverTimer = setTimeout(() => {
       setIsArrowVisible(false);
-    }, 1000);
+    }, 0);
   };
 
   const handleMouseLeave = () => {

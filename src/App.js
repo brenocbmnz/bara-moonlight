@@ -7,6 +7,9 @@ import AboutUs from './components/AboutUs';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import Home from './components/Home';
+import Aegenwulfs from './components/Aegenwulfs';
+import Belmorn from './components/Belmorn';
+import Rokayas from './components/Rokayas';
 import './App.css';
 
 function App() {
@@ -24,6 +27,9 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/gallery" element={<Gallery />} />
+              <Route path="/the-aegenwulfs" element={<Aegenwulfs />} />
+              <Route path="/belmorn" element={<Belmorn />} />
+              <Route path="/rokayas" element={<Rokayas />} />
             </Routes>
           </main>
           <Footer />

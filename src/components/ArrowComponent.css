@@ -5,5 +5,13 @@
   transform: translate(-50%, 0);
   z-index: 2;
   opacity: 0; /* Start with 0 opacity */
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.arrow-animation.visible {
+  opacity: 1;
+}
+
+.arrow-animation.hidden {
+  opacity: 0;
 }

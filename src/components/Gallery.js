@@ -1,43 +1,37 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Gallery.css';
 
 function Gallery() {
-  const images = [
-    { src: 'https://i.imgur.com/7igDcs5.png', alt: 'Crystal Kiss' },
-    { src: 'https://i.imgur.com/icHKcLL.png', alt: 'Smile' },
-    { src: 'https://i.imgur.com/ZrDzB79.jpg', alt: 'Snoot Boop' },
-    // ... add more images
-  ];
+  const navigate = useNavigate();
 
-  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
-
-  const handleImageClick = (index) => {
-    setSelectedImageIndex(index);
-    const fullImageDiv = document.querySelector('.full-image'); 
-    fullImageDiv.classList.add('show'); 
-  };
-
-  const closeFullImage = () => {
-    const fullImageDiv = document.querySelector('.full-image');
-    fullImageDiv.classList.remove('show'); 
+  const handleImageClick = (route) => {
+    navigate(route);
   };
 
   return (
     <section className="gallery">
       <h2>Gallery</h2>
-      <div className="gallery-grid"> 
-        {images.map((image, index) => ( 
-          <div className="gallery-item" key={index} onClick={() => handleImageClick(index)}> 
-            <img src={image.src} alt={image.alt} /> 
-            <div className="gallery-overlay"></div>
+      <div className="gallery-grid">
+        <div className="gallery-item" onClick={() => handleImageClick('/the-aegenwulfs')}>
+          <img src="https://i.imgur.com/7igDcs5.png" alt="The Aegenwulfs" />
+          <div className="gallery-overlay">
+            <p>The Aegenwulfs</p>
           </div>
-        ))}
+        </div>
+        <div className="gallery-item" onClick={() => handleImageClick('/belmorn')}>
+          <img src="https://i.imgur.com/9TON4q0.jpeg" alt="Belmorn" />
+          <div className="gallery-overlay">
+            <p>Belmorn</p>
+          </div>
+        </div>
+        <div className="gallery-item" onClick={() => handleImageClick('/rokayas')}>
+          <img src="https://i.imgur.com/grpnt6E.jpeg" alt="Rokayas" />
+          <div className="gallery-overlay">
+            <p>Rokayas</p>
+          </div>
+        </div>
       </div>
-
-      <div className="full-image">
-        <img src={images[selectedImageIndex]?.src} alt={images[selectedImageIndex]?.alt} /> 
-        <span className="close-button" onClick={closeFullImage}>&times;</span>
-      </div> 
     </section>
   );
 }

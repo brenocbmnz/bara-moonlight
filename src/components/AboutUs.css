@@ -1,0 +1,59 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.about-us-container {
+  font-family: 'Lato', serif;
+  animation: fadeIn 1s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.about-us-section {
+  display: grid;
+  align-items: center;
+  width: 80%;
+  gap: 5em; /* Reduce the gap between the grid columns */
+}
+
+.about-us-section.reverse {
+  grid-template-areas: 
+    "text image";
+}
+
+.about-us-section:not(.reverse) {
+  grid-template-areas: 
+    "image text";
+}
+
+.about-us-section > img {
+  grid-area: image;
+}
+
+.about-us-section.reverse > img {
+  justify-self: end;
+}
+
+.about-us-section > div {
+  grid-area: text;
+}
+
+.about-us-image {
+  width: 400px;
+  height: 500px; /* Set the height of the image */
+  object-fit: cover; /* Resize the image to cover the container */
+}
+
+.additional-info {
+  margin-top: 2em; /* Add some margin to the top of the additional info section */
+  text-align: center; /* Center the text in the additional info section */
+  width: 80%; /* Set the width of the additional info section */
+}
+

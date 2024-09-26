@@ -45,12 +45,15 @@
   animation-delay: 6s;
 }
 
-.text-container.show-text {
-  cursor: pointer; /* Change the cursor back to a pointer when the text and buttons appear */
-}
+
 
 .text-container.show-text .styled-button {
   pointer-events: auto; /* Allow the button to receive mouse events when it appears */
+}
+
+.show-text .styled-button {
+  /* ... existing styles ... */
+  pointer-events: auto; /* Add this line */
 }
 
 @keyframes fadeIn {
@@ -58,40 +61,8 @@
   100% { opacity: 1; }
 }
 
-.show-text p, .show-button {
-  opacity: 1 !important;
-  animation: none !important;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center; /* Align buttons to the center */
-  margin-top: 4em;
-  gap: 20px; /* Adjust this value to change the distance between the buttons */
-}
-
-.styled-button {
-  background: none;
-  color: inherit;
-  font-family: 'Lato', serif;
-  text-shadow: 2px 2px 0px rgb(21, 29, 47);
-  cursor: pointer;
-  transition: color 0.3s ease;
-  opacity: 0;
-  animation: fadeIn 2s ease-in forwards;
-  border-radius: 35px;
-  padding: 5px 50px;
-  margin: 0;
-  background-color: #09121e; /* Silvery blue */
-  border-bottom: 3px solid #0f1717; /* Darker border at the bottom */
-  box-shadow: inset 0 0 15px #444343;; /* Shadow effect */
-  border: none;
-  overflow: hidden; /* Hide the wave effect outside the button */
-  position: relative; /* Needed to position the pseudo-element */
-}
-
 .styled-button:hover {
-  color: #ffffe5;
+  color: #ffffe6;
   
 }
 
@@ -112,27 +83,7 @@
 
 }
 
-.styled-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.1); /* Wave color */
-  transform: skewX(-45deg); /* Make the wave diagonal */
-  transition: left 0.6s ease; /* Wave speed */
-}
-
-.styled-button:hover::after {
-  left: 100%;
-}
-
-.styled-button.right-button::after {
-  transform: skewX(45deg); /* Make the wave diagonal in the opposite direction */
-  left: 100%; /* Start the wave from the right */
-}
-
-.styled-button.right-button:hover::after {
-  left: -100%; /* End the wave on the left */
+.show-text p, .show-button {
+  opacity: 1 !important;
+  animation: none !important;
 }
